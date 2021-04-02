@@ -1,0 +1,30 @@
+# Gem
+Gemfile.lock
+
+# fastlane
+fastlane/test_output
+fastlane/report.xml
+
+# CocoaPods
+Pods
+Podfile.lock
+
+#TAM fat_framewark
+fat_frameworks
+TAMFramework
+
+# Xcode
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata 
+xcuserdata
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.ipa
+*.zip
+Build
+swiftlint.log
+.svn
+.DS_Store
+
+#codesign
+codesigndoc_exports
