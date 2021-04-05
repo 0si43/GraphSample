@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  SpreadSheetView.swift
 //  GraphSample WatchKit Extension
 //
-//  Created by nak-ts on 2021/04/02.
+//  Created by nak-ts on 2021/04/05.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct SpreadSheetView: View {
     var number = 0
     
     var body: some View {
@@ -41,8 +41,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SpreadSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SpreadSheetView()
     }
 }
