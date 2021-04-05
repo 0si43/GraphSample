@@ -9,10 +9,17 @@ import SwiftUI
 
 struct AllSheetsView: View {
     var body: some View {
-        NavigationLink(destination: SpreadSheetView()) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            NavigationLink(destination: SpreadSheetView()) {
+                HStack {
+                    Spacer()
+                    Image(systemName: "plus.circle")
+                    Spacer()
+                }
+            }
+            .listRowPlatterColor(.gray)
         }
-        .navigationTitle("All Sheets")
+    .navigationTitle("All Sheets")
     }
 }
 

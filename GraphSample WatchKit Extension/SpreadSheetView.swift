@@ -37,7 +37,7 @@ struct SpreadSheetView: View {
             }
             .listRowPlatterColor(.yellow)
         }
-        .navigationBarTitle(Text("グラフ"))
+        .navigationBarTitle(Text("表"))
     }
 }
 
