@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SheetSummaryRow: View {
-    var sheet: Sheet
+    @Binding var sheet: Sheet
     
     var body: some View {
         HStack {
@@ -20,9 +20,9 @@ struct SheetSummaryRow: View {
     }
 }
 
-struct SheetSummaryRow_Previews: PreviewProvider {
-    static var previews: some View {
-        let sheet = Sheet(date: Date(), row: 1, column: 1)
-        SheetSummaryRow(sheet: sheet)
-    }
-}
+//struct SheetSummaryRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let sheet = Sheet(date: Date(), row: 1, column: 1)
+//        SheetSummaryRow(sheet: sheet)
+//    }
+//}
