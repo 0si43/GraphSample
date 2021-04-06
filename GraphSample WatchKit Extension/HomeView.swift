@@ -19,11 +19,7 @@ struct HomeView: View {
         
         return List {
             ForEach(0..<sheets.endIndex) { index in
-                HStack {
-                    Spacer()
-                    Text(String(sheets[index].dateAndTime))
-                    Spacer()
-                }
+                SheetSummaryRow(sheet: sheets[index])
             }
             
             NavigationLink(destination: SpreadSheetView()) {

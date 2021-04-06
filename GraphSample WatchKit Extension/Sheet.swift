@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Sheet {
+struct Sheet: Identifiable {
+    var id = UUID()
     var date: Date
     var row: Int
     var column: Int
@@ -16,6 +17,8 @@ struct Sheet {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         formatter.timeStyle = .medium
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.setLocalizedDateFormatFromTemplate("yMdkHms")
         return formatter.string(from: date)
     }
     
