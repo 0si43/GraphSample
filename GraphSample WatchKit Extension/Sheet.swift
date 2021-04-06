@@ -12,6 +12,12 @@ struct Sheet {
     var row: Int
     var column: Int
     var value: [[Int]]
+    var dateAndTime: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        return formatter.string(from: date)
+    }
     
     init(date: Date, row: Int, column: Int) {
         self.date = date

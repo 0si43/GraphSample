@@ -21,7 +21,7 @@ struct HomeView: View {
             ForEach(0..<sheets.endIndex) { index in
                 HStack {
                     Spacer()
-                    Text(String(sheets[index].row))
+                    Text(String(sheets[index].dateAndTime))
                     Spacer()
                 }
             }
