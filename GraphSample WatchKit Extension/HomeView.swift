@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    var sheets = [Sheet]()
+    @State var sheets = [Sheet]()
     
     var body: some View {
-        
-//        let sheets = [
-//            Sheet(date: Date(), row: 1, column: 1),
-//            Sheet(date: Date(), row: 1, column: 1),
-//            Sheet(date: Date(), row: 1, column: 1)
-//        ]
-
         return List {
-            ForEach(0..<sheets.count) {
+            ForEach(0..<sheets.count, id: \.self) {
                 SheetSummaryRow(sheet: sheets[$0])
             }
             NavigationLink(destination: SpreadSheetView()) {
@@ -30,6 +23,9 @@ struct HomeView: View {
                 }
             }
             .listRowPlatterColor(.red)
+            .onTapGesture {
+                self.sheets.append(Sheet(date: Date(), row: 1, column: 1))
+            }
         }
         .navigationTitle("All Sheets")
     }
