@@ -11,7 +11,12 @@ struct SheetSummaryRow: View {
     var sheet: Sheet
     
     var body: some View {
-        SheetSummaryView(sheet: sheet)
+        HStack {
+            Image(systemName: "squareshape.split.3x3")
+                .foregroundColor(.green)
+            Divider()
+            Text(String(sheet.dateAndTime))
+        }
     }
 }
 
