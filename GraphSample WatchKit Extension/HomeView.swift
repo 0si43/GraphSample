@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AllSheetsView: View {
+struct HomeView: View {
     var body: some View {
         List {
             NavigationLink(destination: SpreadSheetView()) {
@@ -23,8 +23,8 @@ struct AllSheetsView: View {
     }
 }
 
-struct AllSheetsView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        AllSheetsView()
+        HomeView()
     }
 }
