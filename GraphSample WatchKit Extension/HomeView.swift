@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    var sheets = [Sheet]()
+    
     var body: some View {
         
-        let sheets = [
-            Sheet(date: Date(), row: 1, column: 1),
-            Sheet(date: Date(), row: 1, column: 1),
-            Sheet(date: Date(), row: 1, column: 1)
-        ]
-        print(sheets.endIndex)
-        
+//        let sheets = [
+//            Sheet(date: Date(), row: 1, column: 1),
+//            Sheet(date: Date(), row: 1, column: 1),
+//            Sheet(date: Date(), row: 1, column: 1)
+//        ]
+
         return List {
-            ForEach(0..<sheets.endIndex) { index in
-                SheetSummaryRow(sheet: sheets[index])
+            ForEach(0..<sheets.count) {
+                SheetSummaryRow(sheet: sheets[$0])
             }
-            
             NavigationLink(destination: SpreadSheetView()) {
                 HStack {
                     Spacer()
@@ -29,9 +29,9 @@ struct HomeView: View {
                     Spacer()
                 }
             }
-            .listRowPlatterColor(.gray)
+            .listRowPlatterColor(.red)
         }
-    .navigationTitle("All Sheets")
+        .navigationTitle("All Sheets")
     }
 }
 
