@@ -12,7 +12,7 @@ struct Sheet: Identifiable {
     var date: Date
     var row: Int
     var column: Int
-    var value: [[Int]]
+    var values: [[Int]]
     var dateAndTime: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -27,7 +27,7 @@ struct Sheet: Identifiable {
         self.row = 3
         self.column = 3
         let innerArray = Array(repeating: 1, count: column)
-        self.value = Array(repeating: innerArray, count: row)
+        self.values = Array(repeating: innerArray, count: row)
     }
     
     init(date: Date, row: Int, column: Int) {
@@ -35,6 +35,6 @@ struct Sheet: Identifiable {
         self.row = row
         self.column = column
         let innerArray = Array(repeating: 1, count: column)
-        self.value = Array(repeating: innerArray, count: row)
+        self.values = Array(repeating: innerArray, count: row)
     }
 }

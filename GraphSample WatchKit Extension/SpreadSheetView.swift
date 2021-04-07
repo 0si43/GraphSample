@@ -9,6 +9,18 @@ import SwiftUI
 
 struct SpreadSheetView: View {
     @Binding var sheet: Sheet
+    private var sumColumns: [Int] {
+        var sums = [Int]()
+        (0..<sheet.column).forEach { column in
+            var sum = 0
+            (0..<sheet.row).forEach { row in
+                sum += sheet.values[row][column]
+            }
+            sums.append(sum)
+        }
+        
+        return sums
+    }
     
     var body: some View {
         List {
@@ -28,14 +40,25 @@ struct SpreadSheetView: View {
                     Divider()
                     Spacer()
                     ForEach(0..<sheet.column) { columnNumber in
-                        Text(String(sheet.value[rowNumber][columnNumber]))
+                        Text(String(sheet.values[rowNumber][columnNumber]))
                             .onTapGesture {
-                                sheet.value[rowNumber][columnNumber] += 1
+                                sheet.values[rowNumber][columnNumber] += 1
                             }
                         Spacer()
                     }
                 }
             }
+            HStack {
+                Text("  ")
+                Divider()
+                Spacer()
+                let sums = sumColumns
+                ForEach(0..<sums.count) { index in
+                    Text(String(sums[index]))
+                    Spacer()
+                }
+            }
+            .listRowPlatterColor(.blue)
         }
         .navigationBarTitle(Text("Sheet"))
     }
