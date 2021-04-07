@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6E0932261D999000E0152F /* SpreadSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6E0931261D999000E0152F /* SpreadSheetRow.swift */; };
 		BFA4655F2616DB6800614EE0 /* GraphSample WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BFA4655E2616DB6800614EE0 /* GraphSample WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BFA465642616DB6800614EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA465632616DB6800614EE0 /* Assets.xcassets */; };
 		BFA4656B2616DB6900614EE0 /* GraphSample WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BFA4656A2616DB6900614EE0 /* GraphSample WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF6E0931261D999000E0152F /* SpreadSheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetRow.swift; sourceTree = "<group>"; };
 		BFA4655A2616DB6700614EE0 /* GraphSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA4655E2616DB6800614EE0 /* GraphSample WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphSample WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA465632616DB6800614EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				BFDBD913261BF14300C76CE1 /* Sheet.swift */,
 				BFDBD920261C2D9400C76CE1 /* SheetThumbnailRow.swift */,
 				BFDBD903261B035700C76CE1 /* SpreadSheetView.swift */,
+				BF6E0931261D999000E0152F /* SpreadSheetRow.swift */,
 				BFA465732616DB6900614EE0 /* NotificationController.swift */,
 				BFA465752616DB6900614EE0 /* NotificationView.swift */,
 				BFA465772616DB6900614EE0 /* ComplicationController.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				BFA465742616DB6900614EE0 /* NotificationController.swift in Sources */,
 				BFDBD90C261BE96900C76CE1 /* HomeView.swift in Sources */,
+				BF6E0932261D999000E0152F /* SpreadSheetRow.swift in Sources */,
 				BFA465782616DB6900614EE0 /* ComplicationController.swift in Sources */,
 				BFA465702616DB6900614EE0 /* GraphSampleApp.swift in Sources */,
 				BFA465762616DB6900614EE0 /* NotificationView.swift in Sources */,

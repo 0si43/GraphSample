@@ -34,19 +34,8 @@ struct SpreadSheetView: View {
                 }
             }
             .listRowPlatterColor(.green)
-            ForEach(0..<sheet.row) { rowNumber in
-                HStack {
-                    Text(String(rowNumber + 1))
-                    Divider()
-                    Spacer()
-                    ForEach(0..<sheet.column) { columnNumber in
-                        Text(String(sheet.values[rowNumber][columnNumber]))
-                            .onTapGesture {
-                                sheet.values[rowNumber][columnNumber] += 1
-                            }
-                        Spacer()
-                    }
-                }
+            ForEach(0..<sheet.row) { index in
+                SpreadSheetRow(rowNumber: index + 1, values: $sheet.values)
             }
             HStack {
                 Text("  ")
