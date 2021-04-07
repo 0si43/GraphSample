@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var sheets = [Sheet]()
+    @State var sheets = [Sheet()]
     
     var body: some View {
         return List {

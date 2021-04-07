@@ -24,8 +24,8 @@ struct Sheet: Identifiable {
     
     init() {
         self.date = Date()
-        self.row = 1
-        self.column = 1
+        self.row = 3
+        self.column = 3
         let innerArray = Array(repeating: 1, count: column)
         self.value = Array(repeating: innerArray, count: row)
     }

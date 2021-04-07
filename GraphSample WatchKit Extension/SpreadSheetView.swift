@@ -13,16 +13,31 @@ struct SpreadSheetView: View {
     var body: some View {
         List {
             HStack {
-                Image(systemName: "person")
+                Text("  ")
+                Divider()
                 Spacer()
-                Text(String(sheet.value[0][0]))
+                ForEach(0..<sheet.column) { index in
+                    Text(String(index + 1))
+                    Spacer()
+                }
             }
             .listRowPlatterColor(.green)
+            ForEach(0..<sheet.row) { rowNumber in
+                HStack {
+                    Text(String(rowNumber + 1))
+                    Divider()
+                    Spacer()
+                    ForEach(0..<sheet.column) { columnNumber in
+                        Text(String(sheet.value[rowNumber][columnNumber]))
+                            .onTapGesture {
+                                sheet.value[rowNumber][columnNumber] += 1
+                            }
+                        Spacer()
+                    }
+                }
+            }
         }
-        .navigationBarTitle(Text("表"))
-        .onTapGesture {
-            sheet.value[0][0] += 1
-        }
+        .navigationBarTitle(Text("Sheet"))
     }
 }
 
