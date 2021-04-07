@@ -24,7 +24,7 @@ struct HomeView: View {
             }
             .listRowPlatterColor(.red)
             .onTapGesture {
-                self.sheets.append(Sheet(date: Date(), row: 1, column: 1))
+                self.sheets.append(Sheet())
             }
         }
         .navigationTitle("All Sheets")

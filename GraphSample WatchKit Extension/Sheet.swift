@@ -22,6 +22,14 @@ struct Sheet: Identifiable {
         return formatter.string(from: date)
     }
     
+    init() {
+        self.date = Date()
+        self.row = 1
+        self.column = 1
+        let innerArray = Array(repeating: 1, count: column)
+        self.value = Array(repeating: innerArray, count: row)
+    }
+    
     init(date: Date, row: Int, column: Int) {
         self.date = date
         self.row = row

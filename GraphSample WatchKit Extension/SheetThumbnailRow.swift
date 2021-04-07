@@ -20,9 +20,10 @@ struct SheetThumbnailRow: View {
     }
 }
 
-//struct SheetThumbnail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SheetSummaryRow(sheet: sheet)
-//    }
-//}
+struct SheetThumbnail_Previews: PreviewProvider {
+    static var previews: some View {
+        let sheet = Sheet()
+        SheetThumbnailRow(dateAndTime: sheet.dateAndTime)
+    }
+}
 
