@@ -12,15 +12,15 @@ struct HomeView: View {
     
     var body: some View {
         return List {
-            ForEach(0..<sheets.count, id: \.self) {
-                SheetSummaryRow(sheet: sheets[$0])
-            }
-            NavigationLink(destination: SpreadSheetView()) {
-                HStack {
-                    Spacer()
-                    Image(systemName: "plus.circle")
-                    Spacer()
+            ForEach(0..<sheets.count, id: \.self) { index in
+                NavigationLink(destination: SpreadSheetView()) {
+                    SheetSummaryRow(sheet: self.$sheets[index])
                 }
+            }
+            HStack {
+                Spacer()
+                Image(systemName: "plus.circle")
+                Spacer()
             }
             .listRowPlatterColor(.red)
             .onTapGesture {
