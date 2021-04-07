@@ -19,7 +19,7 @@
 		BFDBD904261B035700C76CE1 /* SpreadSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD903261B035700C76CE1 /* SpreadSheetView.swift */; };
 		BFDBD90C261BE96900C76CE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD90B261BE96900C76CE1 /* HomeView.swift */; };
 		BFDBD914261BF14300C76CE1 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD913261BF14300C76CE1 /* Sheet.swift */; };
-		BFDBD921261C2D9400C76CE1 /* SheetSummaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD920261C2D9400C76CE1 /* SheetSummaryRow.swift */; };
+		BFDBD921261C2D9400C76CE1 /* SheetThumbnailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBD920261C2D9400C76CE1 /* SheetThumbnailRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 		BFDBD903261B035700C76CE1 /* SpreadSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetView.swift; sourceTree = "<group>"; };
 		BFDBD90B261BE96900C76CE1 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BFDBD913261BF14300C76CE1 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
-		BFDBD920261C2D9400C76CE1 /* SheetSummaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSummaryRow.swift; sourceTree = "<group>"; };
+		BFDBD920261C2D9400C76CE1 /* SheetThumbnailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetThumbnailRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 				BFA4656F2616DB6900614EE0 /* GraphSampleApp.swift */,
 				BFDBD90B261BE96900C76CE1 /* HomeView.swift */,
 				BFDBD913261BF14300C76CE1 /* Sheet.swift */,
-				BFDBD920261C2D9400C76CE1 /* SheetSummaryRow.swift */,
+				BFDBD920261C2D9400C76CE1 /* SheetThumbnailRow.swift */,
 				BFDBD903261B035700C76CE1 /* SpreadSheetView.swift */,
 				BFA465732616DB6900614EE0 /* NotificationController.swift */,
 				BFA465752616DB6900614EE0 /* NotificationView.swift */,
@@ -283,7 +283,7 @@
 				BFA465762616DB6900614EE0 /* NotificationView.swift in Sources */,
 				BFDBD904261B035700C76CE1 /* SpreadSheetView.swift in Sources */,
 				BFDBD914261BF14300C76CE1 /* Sheet.swift in Sources */,
-				BFDBD921261C2D9400C76CE1 /* SheetSummaryRow.swift in Sources */,
+				BFDBD921261C2D9400C76CE1 /* SheetThumbnailRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

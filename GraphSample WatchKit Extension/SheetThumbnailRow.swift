@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct SheetSummaryRow: View {
-    @Binding var sheet: Sheet
+struct SheetThumbnailRow: View {
+    var dateAndTime: String
     
     var body: some View {
         HStack {
             Image(systemName: "squareshape.split.3x3")
                 .foregroundColor(.green)
             Divider()
-            Text(String(sheet.dateAndTime))
+            Text(dateAndTime)
         }
     }
 }
 
-//struct SheetSummaryRow_Previews: PreviewProvider {
+//struct SheetThumbnail_Previews: PreviewProvider {
 //    static var previews: some View {
-//        let sheet = Sheet(date: Date(), row: 1, column: 1)
 //        SheetSummaryRow(sheet: sheet)
 //    }
 //}
+

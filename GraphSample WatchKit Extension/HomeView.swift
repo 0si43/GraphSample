@@ -14,7 +14,7 @@ struct HomeView: View {
         return List {
             ForEach(0..<sheets.count, id: \.self) { index in
                 NavigationLink(destination: SpreadSheetView()) {
-                    SheetSummaryRow(sheet: self.$sheets[index])
+                    SheetThumbnailRow(dateAndTime: self.sheets[index].dateAndTime)
                 }
             }
             HStack {
