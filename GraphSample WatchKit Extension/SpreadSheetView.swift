@@ -8,41 +8,27 @@
 import SwiftUI
 
 struct SpreadSheetView: View {
-    var number = 0
+    @Binding var sheet: Sheet
     
     var body: some View {
         List {
             HStack {
                 Image(systemName: "person")
                 Spacer()
-                Text(String(number))
+                Text(String(sheet.value[0][0]))
             }
             .listRowPlatterColor(.green)
-            HStack {
-                Image(systemName: "person")
-                Spacer()
-                Text(String(number))
-            }
-            .listRowPlatterColor(.blue)
-            HStack {
-                Image(systemName: "person")
-                Spacer()
-                Text(String(number))
-            }
-            .listRowPlatterColor(.red)
-            HStack {
-                Image(systemName: "person")
-                Spacer()
-                Text(String(number))
-            }
-            .listRowPlatterColor(.yellow)
         }
         .navigationBarTitle(Text("表"))
+        .onTapGesture {
+            sheet.value[0][0] += 1
+        }
     }
 }
 
 struct SpreadSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SpreadSheetView()
+        let view = HomeView()
+        SpreadSheetView(sheet: view.$sheets[0])
     }
 }

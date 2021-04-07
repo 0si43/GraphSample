@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         return List {
             ForEach(0..<sheets.count, id: \.self) { index in
-                NavigationLink(destination: SpreadSheetView()) {
+                NavigationLink(destination: SpreadSheetView(sheet: self.$sheets[index])) {
                     SheetThumbnailRow(dateAndTime: self.sheets[index].dateAndTime)
                 }
             }
