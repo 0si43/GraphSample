@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SpreadSheetView: View {
     @Binding var sheet: Sheet
+    @State var isEditable = false
     private var sumColumns: [Int] {
         var sums = [Int]()
         (0..<sheet.column).forEach { column in
@@ -35,7 +36,7 @@ struct SpreadSheetView: View {
             }
             .listRowPlatterColor(.green)
             ForEach(0..<sheet.row) { index in
-                SpreadSheetRow(rowNumber: index + 1, values: $sheet.values)
+                SpreadSheetRow(rowNumber: index + 1, values: $sheet.values, isEditable: isEditable)
             }
             HStack {
                 Text("  ")
@@ -50,6 +51,12 @@ struct SpreadSheetView: View {
             .listRowPlatterColor(.blue)
         }
         .navigationBarTitle(Text("Sheet"))
+        .toolbar {
+            Toggle(isOn: $isEditable) {
+                Text("Edit Mode")
+            }
+            .padding()
+        }
     }
 }
 
