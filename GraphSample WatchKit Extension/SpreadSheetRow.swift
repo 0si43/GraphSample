@@ -9,37 +9,32 @@ import SwiftUI
 
 struct SpreadSheetRow: View {
     var rowNumber: Int
-    @State var temp = 0.0
+    var range = 0..<100
     @Binding var values: [[Int]]
     
     var body: some View {
-//        HStack {
-//            Text(String(rowNumber))
-//            Divider()
-//            Spacer()
-//            ForEach(0..<values[rowNumber - 1].count) { columnNumber in
-//                Text(String(values[rowNumber - 1][columnNumber]))
-//                    .onTapGesture {
-//                        values[rowNumber - 1][columnNumber] += 1
-//                    }
-//                Spacer()
-//            }
-//        }
-        Text(String(temp))
-            .focusable()
-            .digitalCrownRotation($temp,
-                                  from: 0.0,
-                                  through: 15.0,
-                                  by: 1.0,
-                                  sensitivity: .medium,
-                                  isContinuous: false,
-                                  isHapticFeedbackEnabled: true)
+        HStack {
+            Text(String(rowNumber))
+            Divider()
+            Spacer()
+            ForEach(0..<values[rowNumber - 1].count) { columnNumber in
+                let targetValue = $values[rowNumber - 1][columnNumber]
+                Picker("", selection: targetValue) {
+                    ForEach(range) {
+                        Text(String($0))
+                    }
+                }
+                .pickerStyle(InlinePickerStyle())
+                .labelsHidden()
+                Spacer()
+            }
+        }
     }
 }
 
 struct SpreadSheetRow_Previews: PreviewProvider {
     static var previews: some View {
         let view = HomeView()
-        SpreadSheetRow(rowNumber: 0, values: view.$sheets[0].values)
+        SpreadSheetRow(rowNumber: 1, values: view.$sheets[0].values)
     }
 }
