@@ -20,10 +20,6 @@ struct SheetSettingView: View {
                 Text("Change Setting")
                     .padding()
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
             .sheet(isPresented: $isShowingSheet) {
                 SheetSettingChangeView(sheet: $sheet)
             }
