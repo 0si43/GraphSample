@@ -9,7 +9,24 @@ import SwiftUI
 
 struct SheetSettingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Button(action: {
+                print("tapped")
+            }) {
+                Text("Change Setting")
+                    .padding()
+            }
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.gray, lineWidth: 1)
+            )
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+        }
+        .navigationBarTitle(Text("Setting"))
     }
 }
 
