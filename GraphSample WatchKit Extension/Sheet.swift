@@ -10,8 +10,8 @@ import Foundation
 struct Sheet: Identifiable {
     var id = UUID()
     var date: Date
-    var row: Int
-    var column: Int
+    var row: Int { willSet { adjustArray(row: newValue) }}
+    var column: Int { willSet { adjustArray(column: newValue) }}
     var values: [[Int]]
     var dateAndTime: String {
         let formatter = DateFormatter()
@@ -36,5 +36,26 @@ struct Sheet: Identifiable {
         self.column = column
         let innerArray = Array(repeating: 1, count: column)
         self.values = Array(repeating: innerArray, count: row)
+    }
+    
+    mutating func adjustArray(row: Int) {
+        print(row)
+        guard 0 < row, values.count < row else { return }
+//        if row < values.count {
+//            (row..<values.count).forEach {
+//                print("delete: " + String($0))
+//                values.remove(at: $0)
+//            }
+//        } else if values.count < row {
+        (values.count..<row).forEach {_ in
+            let innerArray = Array(repeating: 1, count: column)
+            values.append(innerArray)
+        }
+//        }
+        print(self)
+    }
+    
+    func adjustArray(column: Int) {
+        
     }
 }
