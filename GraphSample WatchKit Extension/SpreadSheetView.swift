@@ -24,38 +24,40 @@ struct SpreadSheetView: View {
     }
     
     var body: some View {
-        List {
-            HStack {
-                Text("  ")
-                Divider()
-                Spacer()
-                ForEach(0..<sheet.column) { index in
-                    Text(String(index + 1))
+        TabView {
+            List {
+                HStack {
+                    Text("  ")
+                    Divider()
                     Spacer()
+                    ForEach(0..<sheet.column) { index in
+                        Text(String(index + 1))
+                        Spacer()
+                    }
+                }
+                .listRowPlatterColor(.green)
+                ForEach(0..<sheet.row) { index in
+                    SpreadSheetRow(rowNumber: index + 1, values: $sheet.values, isEditable: isEditable)
+                }
+                HStack {
+                    Text("  ")
+                    Divider()
+                    Spacer()
+                    let sums = sumColumns
+                    ForEach(0..<sums.count) { index in
+                        Text(String(sums[index]))
+                        Spacer()
+                    }
+                }
+                .listRowPlatterColor(.blue)
+                HStack {
+                    Toggle(isOn: $isEditable) {
+                        Text("Edit Mode")
+                    }
+                    .padding()
                 }
             }
-            .listRowPlatterColor(.green)
-            ForEach(0..<sheet.row) { index in
-                SpreadSheetRow(rowNumber: index + 1, values: $sheet.values, isEditable: isEditable)
-            }
-            HStack {
-                Text("  ")
-                Divider()
-                Spacer()
-                let sums = sumColumns
-                ForEach(0..<sums.count) { index in
-                    Text(String(sums[index]))
-                    Spacer()
-                }
-            }
-            .listRowPlatterColor(.blue)
-        }
-        .navigationBarTitle(Text("Sheet"))
-        .toolbar {
-            Toggle(isOn: $isEditable) {
-                Text("Edit Mode")
-            }
-            .padding()
+            .navigationBarTitle(Text("Sheet"))
         }
     }
 }
