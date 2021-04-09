@@ -17,6 +17,9 @@ struct HomeView: View {
                     SheetThumbnailRow(dateAndTime: self.sheets[index].dateAndTime)
                 }
             }
+            .onDelete { indexSet in
+                self.sheets.remove(atOffsets: indexSet)
+            }
             HStack {
                 Spacer()
                 Image(systemName: "plus.circle")
