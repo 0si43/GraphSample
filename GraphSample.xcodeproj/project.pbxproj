@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF1F1C91261FEDDA00AE5C90 /* SpreadSheetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F1C90261FEDDA00AE5C90 /* SpreadSheetTabView.swift */; };
 		BF1F1C96261FF18200AE5C90 /* SheetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F1C95261FF18200AE5C90 /* SheetSettingView.swift */; };
+		BF1F1C9B261FF8A600AE5C90 /* SheetSettingChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F1C9A261FF8A600AE5C90 /* SheetSettingChangeView.swift */; };
 		BF6E0932261D999000E0152F /* SpreadSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6E0931261D999000E0152F /* SpreadSheetRow.swift */; };
 		BFA4655F2616DB6800614EE0 /* GraphSample WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BFA4655E2616DB6800614EE0 /* GraphSample WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BFA465642616DB6800614EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA465632616DB6800614EE0 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		BF1F1C90261FEDDA00AE5C90 /* SpreadSheetTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetTabView.swift; sourceTree = "<group>"; };
 		BF1F1C95261FF18200AE5C90 /* SheetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSettingView.swift; sourceTree = "<group>"; };
+		BF1F1C9A261FF8A600AE5C90 /* SheetSettingChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSettingChangeView.swift; sourceTree = "<group>"; };
 		BF6E0931261D999000E0152F /* SpreadSheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetRow.swift; sourceTree = "<group>"; };
 		BFA4655A2616DB6700614EE0 /* GraphSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA4655E2616DB6800614EE0 /* GraphSample WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphSample WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				BFDBD903261B035700C76CE1 /* SpreadSheetView.swift */,
 				BF1F1C90261FEDDA00AE5C90 /* SpreadSheetTabView.swift */,
 				BF1F1C95261FF18200AE5C90 /* SheetSettingView.swift */,
+				BF1F1C9A261FF8A600AE5C90 /* SheetSettingChangeView.swift */,
 				BF6E0931261D999000E0152F /* SpreadSheetRow.swift */,
 				BFA465732616DB6900614EE0 /* NotificationController.swift */,
 				BFA465752616DB6900614EE0 /* NotificationView.swift */,
@@ -288,6 +291,7 @@
 				BFA465742616DB6900614EE0 /* NotificationController.swift in Sources */,
 				BFDBD90C261BE96900C76CE1 /* HomeView.swift in Sources */,
 				BF6E0932261D999000E0152F /* SpreadSheetRow.swift in Sources */,
+				BF1F1C9B261FF8A600AE5C90 /* SheetSettingChangeView.swift in Sources */,
 				BF1F1C96261FF18200AE5C90 /* SheetSettingView.swift in Sources */,
 				BFA465782616DB6900614EE0 /* ComplicationController.swift in Sources */,
 				BFA465702616DB6900614EE0 /* GraphSampleApp.swift in Sources */,
