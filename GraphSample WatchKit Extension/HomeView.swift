@@ -17,6 +17,9 @@ struct HomeView: View {
                     SheetThumbnailRow(dateAndTime: self.sheets[index].dateAndTime)
                 }
             }
+            .onMove { indices, newOffset in
+                self.sheets.move(fromOffsets: indices, toOffset: newOffset)
+            }
             .onDelete { indexSet in
                 self.sheets.remove(atOffsets: indexSet)
             }
