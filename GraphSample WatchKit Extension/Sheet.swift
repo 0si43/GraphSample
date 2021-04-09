@@ -39,7 +39,6 @@ struct Sheet: Identifiable {
     }
     
     mutating func adjustArray(row: Int) {
-        print(row)
         guard 0 < row, values.count < row else { return }
 //        if row < values.count {
 //            (row..<values.count).forEach {
@@ -52,10 +51,12 @@ struct Sheet: Identifiable {
             values.append(innerArray)
         }
 //        }
-        print(self)
     }
     
-    func adjustArray(column: Int) {
-        
+    mutating func adjustArray(column: Int) {
+//        guard 0 < column, 0 < row, values[0].count < column else { return }
+//        (values[0].count..<column).forEach {
+//            values[$0 - 1].append(1)
+//        }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct SheetSettingChangeView: View {
     var range = 0..<100
     @Binding var sheet: Sheet
+    @State var column = 3
     
     var body: some View {
         VStack {
@@ -19,7 +20,7 @@ struct SheetSettingChangeView: View {
                 }
             }
             .pickerStyle(InlinePickerStyle())
-            Picker("column", selection: $sheet.column) {
+            Picker("column", selection: $column) {
                 ForEach(range) {
                     Text(String($0))
                 }
