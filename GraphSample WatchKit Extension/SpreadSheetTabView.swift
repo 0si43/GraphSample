@@ -13,6 +13,7 @@ struct SpreadSheetTabView: View {
     var body: some View {
         TabView {
             SpreadSheetView(sheet: $sheet)
+            SheetSettingView()
         }
     }
 }
